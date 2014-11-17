@@ -235,7 +235,7 @@ describe('$modal', function () {
           ok: function() {return $q.reject('ko');}
         }}
       );
-      expect(modal.opened).toBeRejectedWith(false);
+      expect(modal.opened).toBeRejectedWith('ko');
     });
 
   });

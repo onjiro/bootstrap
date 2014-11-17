@@ -400,8 +400,8 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
 
             templateAndResolvePromise.then(function () {
               modalOpenedDeferred.resolve(true);
-            }, function () {
-              modalOpenedDeferred.reject(false);
+            }, function (reason) {
+              modalOpenedDeferred.reject(reason);
             });
 
             return modalInstance;
